@@ -1,6 +1,36 @@
 import styled from 'styled-components';
 
-/*EquipmentFilter.js*/
+/* Header Area */
+
+export const HeaderContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
+
+export const Title = styled.p`
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 2.5% /* Desktop */
+    //margin-left: 24.5%; /* Mobile */
+`;
+
+export const SelectContainer = styled.span`
+    margin-top: .7%;
+    position: absolute;
+    right: 6.5%; /* Desktop */
+    //right: 24.5%; /* Mobile */
+`;
+
+/*top, right, bottom, left*/
+
+export const Select = styled.select`
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 10px 5px 10px;
+    background-color: #EEF4ED;
+`;
+
+/* EquipmentFilter Area */
 
 export const MainContainer = styled.div`
     display: flex;
@@ -14,8 +44,9 @@ export const MainContainer = styled.div`
 /*top, right, bottom, left*/
 
 export const Tile = styled.div` 
-    width: 20%; /* Looks Good on Desktop, Not on Mobile */
+    width: 80%; /* Looks Good on Desktop, Not on Mobile */
     //width: 50vw; /* Looks Good On Mobile, Not on Desktop */
+    //width: 20vw; /* Looks Good On Mobile, Not on Desktop */
     box-sizing: border-box;
     padding: 5px 10px 10px 10px;
     margin: 15px 3px 15px 3px;
@@ -81,8 +112,7 @@ export const PlusSign = styled.p`
     text-align: center;
     font-size: 22px;
     font-weight: 700;
-    //line-height: 40%;
-    //margin-top: 15%;
+    line-height: 40%;
 `;
 
 export const AddEquipText = styled.p`
@@ -90,36 +120,5 @@ export const AddEquipText = styled.p`
     text-align: center;
     font-size: 16px;
     font-weight: 700; 
-    //line-height: 40%;
-`;
-
-/*Header Area*/
-
-export const HeaderContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-`;
-
-export const Title = styled.p`
-    font-size: 13px;
-    font-weight: 700;
-    margin-left: 13% /* Desktop */
-    //margin-left: 24.5%; /* Mobile */
-`;
-
-export const SelectContainer = styled.span`
-    margin-top: .5%;
-    position: absolute;
-    right: 13.5%; /* Desktop */
-    //right: 24.5%; /* Mobile */
-`;
-
-/*top, right, bottom, left*/
-
-export const Select = styled.select`
-    font-size: 16px;
-    font-weight: 700;
-    //padding: 3px 8px 3px 8px;
-    padding: 5px 10px 5px 10px;
-    background-color: #EEF4ED;
+    line-height: 40%;
 `;

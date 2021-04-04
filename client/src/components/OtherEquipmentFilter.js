@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import {
-    //MainContainer,
-    Tile,
     ParaAndTagParent,
     Parallelogram,
     Tag,
     Exclamation,
-    Model,
-    Serial,
-    AssociatedDevices,
-    PlusSign,
-    AddEquipText,
-    HeaderContainer,
-    Title,
-    SelectContainer,
-    Select
+    // Model,
+    // Serial,
+    // AssociatedDevices,
+    // PlusSign,
+    // AddEquipText,
+    // HeaderContainer,
+    // Title,
+    // SelectContainer,
+    // Select
 } from '../styledcomponents/Styles';
 import './style.css';
 import { useHistory } from 'react-router-dom';
@@ -85,48 +83,49 @@ const EquipmentFilter = () => {
 
     return (
         <>
-            <HeaderContainer>
+            <div>
 
-                <Title>EQUIPMENT</Title>
+                <p>EQUIPMENT</p>
 
-                <SelectContainer>
-                    <Select
+                <div>
+                    <select
                         onChange={handleChange}
                     >
                         <option disable='true' value="filterbytag">FILTER BY TAG</option>
                         <option defaultValue="Eos">Eos</option>
                         <option defaultValue="Repellendus">Repellendus</option>
                         <option defaultValue="Maiores">Maiores</option>
-                    </Select>
-                </SelectContainer>
+                    </select>
+                </div>
 
-            </HeaderContainer>
+            </div>
 
             <div className='grid'>
                 {data.map((item) => (
-                    <Tile key={item.id}
+                    <div key={item.id}
                         id={item.id}
+                        //className='grid'
                         onClick={(item) => onClickHandler(item)}
                     >
-                        <ParaAndTagParent>
+                        {/* <ParaAndTagParent>
                             <Parallelogram><span><Tag>{item.tag}</Tag></span></Parallelogram>
                             <p>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</p>
                         </ParaAndTagParent>
-                        <br></br>
-                        <Model><strong>{item.model}</strong></Model>
-                        <Serial>Serial Number: {item.serialNumber}</Serial>
-                        <AssociatedDevices>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</AssociatedDevices>
-                    </Tile>
+                        <br></br> */}
+                        <p><strong>{item.model}</strong></p>
+                        <p>Serial Number: {item.serialNumber}</p>
+                        <p>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</p>
+                    </div>
                 ))}
                 {showAddEquipment &&
-                    <Tile
+                    <div
                         id='addItem'
                         onClick={(item) => onClickHandler(item)}
                     >
                         <br></br>
-                        <PlusSign>+</PlusSign>
-                        <AddEquipText>Add Equipment</AddEquipText>
-                    </Tile>
+                        <div>+</div>
+                        <div>Add Equipment</div>
+                    </div>
                 }
             </div>
         </>
