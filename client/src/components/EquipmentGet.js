@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-    MainContainer,
+    SingleContainer,
     Tile,
     ParaAndTagParent,
     Parallelogram,
@@ -52,7 +52,8 @@ const EquipmentGet = ({ match }) => {
 
     return (
         <div>
-            <MainContainer>
+            <br></br>
+            <SingleContainer>
                 {data.map((item) => (
                     <Tile key={item.id}
                         id={item.id}
@@ -68,7 +69,7 @@ const EquipmentGet = ({ match }) => {
                         <AssociatedDevices>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</AssociatedDevices>
                     </Tile>
                 ))}
-            </MainContainer>
+            </SingleContainer>
             <button onClick={onClickHandler}>Go Back</button>
         </div>
     )

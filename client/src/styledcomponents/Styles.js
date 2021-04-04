@@ -19,16 +19,12 @@ export const SelectContainer = styled.span`
     right: 8%;  
 `;
 
-/*top, right, bottom, left*/
-
 export const Select = styled.select`
     font-size: 16px;
     font-weight: 700;
     padding: 5px 10px 5px 10px;
     background-color: #EEF4ED;
 `;
-
-/* EquipmentFilter Area */
 
 export const MainContainer = styled.div`
     display: grid;
@@ -121,4 +117,11 @@ export const AddEquipText = styled.p`
     font-size: 22px;
     font-weight: 400; 
     line-height: 40%;
+`;
+
+/* EquipmentGet and EquipmentAdd */
+
+export const SingleContainer = styled.div`
+margin: 0 auto;
+max-width: 50%;
 `;

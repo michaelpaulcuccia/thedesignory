@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    MainContainer,
+    SingleContainer,
     Tile,
     ParaAndTagParent,
     Parallelogram,
@@ -21,7 +21,8 @@ const EquipmentAdd = () => {
 
     return (
         <div>
-            <MainContainer>
+            <br></br>
+            <SingleContainer>
 
                 <Tile>
                     <ParaAndTagParent>
@@ -33,7 +34,7 @@ const EquipmentAdd = () => {
                     <AssociatedDevices>Associated Devices: <i>000</i></AssociatedDevices>
                 </Tile>
 
-            </MainContainer>
+            </SingleContainer>
             <button onClick={onClickHandler}>Go Back</button>
         </div>
     )
