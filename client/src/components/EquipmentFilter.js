@@ -102,6 +102,7 @@ const EquipmentFilter = () => {
             </HeaderContainer>
 
             <MainContainer>
+
                 {data.map((item) => (
                     <Tile key={item.id}
                         id={item.id}
@@ -117,6 +118,7 @@ const EquipmentFilter = () => {
                         <AssociatedDevices>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</AssociatedDevices>
                     </Tile>
                 ))}
+
                 {showAddEquipment &&
                     <Tile
                         id='addItem'
@@ -127,6 +129,7 @@ const EquipmentFilter = () => {
                         <AddEquipText>Add Equipment</AddEquipText>
                     </Tile>
                 }
+
             </MainContainer>
         </>
     )

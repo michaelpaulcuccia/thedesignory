@@ -23,7 +23,6 @@ const EquipmentAdd = () => {
         <div>
             <br></br>
             <SingleContainer>
-
                 <Tile>
                     <ParaAndTagParent>
                         <Parallelogram><span><Tag>ADD A TAG</Tag></span></Parallelogram>
@@ -33,7 +32,6 @@ const EquipmentAdd = () => {
                     <Serial>Serial Number: <i>ABC001</i></Serial>
                     <AssociatedDevices>Associated Devices: <i>000</i></AssociatedDevices>
                 </Tile>
-
             </SingleContainer>
             <button onClick={onClickHandler}>Go Back</button>
         </div>

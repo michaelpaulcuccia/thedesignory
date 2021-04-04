@@ -16,7 +16,7 @@ export const Title = styled.p`
 export const SelectContainer = styled.span`
     margin-top: .7%;
     position: absolute;
-    right: 8%;  
+    right: 6.5%;  
 `;
 
 export const Select = styled.select`
@@ -25,6 +25,8 @@ export const Select = styled.select`
     padding: 5px 10px 5px 10px;
     background-color: #EEF4ED;
 `;
+
+/* EquipmentFilter Area */
 
 export const MainContainer = styled.div`
     display: grid;
@@ -37,12 +39,8 @@ export const MainContainer = styled.div`
     margin-right: 2%;
 `;
 
-/*top, right, bottom, left*/
-
 export const Tile = styled.div` 
-    width: 80%; /* Looks Good on Desktop, Not on Mobile */
-    //width: 50vw; /* Looks Good On Mobile, Not on Desktop */
-    //width: 20vw; /* Looks Good On Mobile, Not on Desktop */
+    width: 80%; 
     box-sizing: border-box;
     padding: 5px 10px 10px 10px;
     margin: 15px 3px 15px 3px;
@@ -119,7 +117,7 @@ export const AddEquipText = styled.p`
     line-height: 40%;
 `;
 
-/* EquipmentGet and EquipmentAdd */
+/* EquipmentGet.js and EquipmentAdd.js Single Container */
 
 export const SingleContainer = styled.div`
 margin: 0 auto;
