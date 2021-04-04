@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-    //MainContainer,
+    MainContainer,
     Tile,
     ParaAndTagParent,
     Parallelogram,
@@ -16,7 +16,6 @@ import {
     SelectContainer,
     Select
 } from '../styledcomponents/Styles';
-import './style.css';
 import { useHistory } from 'react-router-dom';
 
 const EquipmentFilter = () => {
@@ -102,7 +101,7 @@ const EquipmentFilter = () => {
 
             </HeaderContainer>
 
-            <div className='grid'>
+            <MainContainer>
                 {data.map((item) => (
                     <Tile key={item.id}
                         id={item.id}
@@ -128,7 +127,7 @@ const EquipmentFilter = () => {
                         <AddEquipText>Add Equipment</AddEquipText>
                     </Tile>
                 }
-            </div>
+            </MainContainer>
         </>
     )
 }

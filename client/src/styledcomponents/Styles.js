@@ -10,15 +10,13 @@ export const HeaderContainer = styled.div`
 export const Title = styled.p`
     font-size: 13px;
     font-weight: 700;
-    margin-left: 2.5% /* Desktop */
-    //margin-left: 24.5%; /* Mobile */
+    margin-left: 2% 
 `;
 
 export const SelectContainer = styled.span`
     margin-top: .7%;
     position: absolute;
-    right: 6.5%; /* Desktop */
-    //right: 24.5%; /* Mobile */
+    right: 8%;  
 `;
 
 /*top, right, bottom, left*/
@@ -33,12 +31,14 @@ export const Select = styled.select`
 /* EquipmentFilter Area */
 
 export const MainContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-left: 10%;
-    margin-right: 10%;
-    flex-wrap: wrap;
+    display: grid;
+    /*OK - columns */
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    grid-template-rows:  repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    margin-left: 2%;
+    margin-right: 2%;
 `;
 
 /*top, right, bottom, left*/
@@ -118,7 +118,7 @@ export const PlusSign = styled.p`
 export const AddEquipText = styled.p`
     color: #134074; 
     text-align: center;
-    font-size: 16px;
-    font-weight: 700; 
+    font-size: 22px;
+    font-weight: 400; 
     line-height: 40%;
 `;
