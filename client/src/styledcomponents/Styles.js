@@ -10,7 +10,7 @@ export const HeaderContainer = styled.div`
 export const Title = styled.p`
     font-size: 13px;
     font-weight: 700;
-    margin-left: 2% 
+    margin-left: 6% 
 `;
 
 export const SelectContainer = styled.span`
@@ -35,7 +35,7 @@ export const MainContainer = styled.div`
     grid-template-rows:  repeat(2, 1fr);
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-    margin-left: 2%;
+    margin-left: 6%;
     margin-right: 2%;
 `;
 
