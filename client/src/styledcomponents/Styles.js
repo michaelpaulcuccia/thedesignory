@@ -42,10 +42,7 @@ export const GridContainer = styled.div`
 export const Tile = styled.div`
     padding: 2rem;
     background-color: #FCFDFC;
-    //height: 10rem;
-    /* starting 10rem, 
-    height: 10vh;
-    //height: clamp(10rem)
+    height: minmax(fit-content, 10rem);
 `;
 
 export const ParaAndTag = styled.div`
@@ -122,6 +119,6 @@ export const AddEquipText = styled.p`
 /* EquipmentGet.js and EquipmentAdd.js Single Container */
 
 export const SingleContainer = styled.div`
-margin: 0 auto;
-max-width: 50%;
+    margin: 0 auto;
+    max-width: 50%;
 `;
