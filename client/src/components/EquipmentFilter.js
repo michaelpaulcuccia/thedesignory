@@ -6,7 +6,11 @@ import {
     Title,
     Select,
     GridContainer,
-    Tile
+    Tile,
+    ParaAndTag,
+    Parallelogram,
+    Tag,
+    Exclamation
 } from '../styledcomponents/Styles';
 import { useHistory } from 'react-router-dom';
 
@@ -104,13 +108,13 @@ const EquipmentFilter = () => {
                         id={item.id}
                         onClick={(item) => onClickHandler(item)}
                     >
-                        <div>
-                            <div><p>{item.tag}</p></div>
-                            <p>{item.hasError && item.hasError === true ? <p>!</p> : ""}</p>
-                        </div>
-                        <p><strong>{item.model}</strong></p>
+                        <ParaAndTag>
+                            <Parallelogram><Tag>{item.tag}</Tag></Parallelogram>
+                            <div>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</div>
+                        </ParaAndTag>
+                        {/* <p><strong>{item.model}</strong></p>
                         <p>Serial Number: {item.serialNumber}</p>
-                        <p>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</p>
+                        <p>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</p> */}
                     </Tile>
                 ))}
 

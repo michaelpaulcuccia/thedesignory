@@ -46,8 +46,41 @@ export const GridContainer = styled.div`
 `;
 
 export const Tile = styled.div`
-padding: 5px 10px 10px 10px;
-margin: 15px 3px 15px 3px;
-background-color: #FCFDFC;
+    padding: 5px 10px 10px 10px;
+    margin: 15px 5px 15px 5px;
+    background-color: #FCFDFC;
 `;
 
+export const ParaAndTag = styled.div`
+    width: 100%
+`;
+
+export const Parallelogram = styled.div`
+    width: fit-content;
+    height: fit-content;
+    transform: skew(-20deg);
+    background: #134074;
+    float: left;
+    margin-left: 5%;
+`;
+
+export const Tag = styled.div`
+    transform: skew(+20deg);    
+    font-size: 12px;
+    font-weight: 600;
+    color: #FCFDFC;
+    padding: 5px 10px 5px 10px;
+`;
+
+export const Exclamation = styled.div`
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    color: #030912;
+    text-align: center;
+    background-color: #EEF4ED;
+    float: right;
+`;
