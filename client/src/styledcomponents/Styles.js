@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
     width: 100%;
+    //max-width: fit-content(20em);
 `;
 
 export const InLineContainerLeft = styled.div`
@@ -36,6 +37,7 @@ export const Select = styled.select`
 /* --------------------------------- */
 
 export const GridContainer = styled.div`
+    //max-width: fit-content(20em);
     display: grid;
     grid-template-columns:
     repeat(auto-fit, minmax(300px, 1fr));
