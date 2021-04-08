@@ -35,20 +35,28 @@ export const Select = styled.select`
 /* Grid and Tiles */
 
 export const GridContainer = styled.div`
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    // grid-template-rows:  repeat(2, 1fr);
+    // grid-column-gap: 1%;
+    // grid-row-gap: .5%; 
+    // margin-left: 10vw;
+    // margin-right: 10vw;
+    // max-width: 1200px;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows:  repeat(2, 1fr);
-    grid-column-gap: 1%;
-    grid-row-gap: .5%; 
-    margin-left: 10vw;
-    margin-right: 10vw;
-    max-width: 1200px;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const Tile = styled.div`
     padding: 5px 10px 10px 10px;
     margin: 15px 5px 15px 5px;
     background-color: #FCFDFC;
+    width: minmax(200px, 50vw);
+    height: minmax(200px, 50vh);
 `;
 
 export const ParaAndTag = styled.div`
