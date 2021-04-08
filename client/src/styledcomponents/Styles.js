@@ -42,7 +42,10 @@ export const GridContainer = styled.div`
 export const Tile = styled.div`
     padding: 2rem;
     background-color: #FCFDFC;
-    height: 10rem;
+    //height: 10rem;
+    /* starting 10rem, 
+    height: 10vh;
+    //height: clamp(10rem)
 `;
 
 export const ParaAndTag = styled.div`
