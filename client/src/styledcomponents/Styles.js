@@ -3,21 +3,18 @@ import styled from 'styled-components';
 /* Header */
 
 export const HeaderContainer = styled.div`
-    max-width: 1200px;
-    margin-top: .5%;
-    margin-left: 10vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:  1fr;
+    width: 100%;
 `;
 
 export const InLineContainerLeft = styled.div`
-    display: inline-block;
+    float: left;
+    margin-left: 1.2%;
 `;
 
 export const InLineContainerRight = styled.div`
-    display: inline-block;
-    margin-left: 72%;
+    float: right;
+    margin-right: 1.2%;
+
 `;
 
 export const Title = styled.span`
