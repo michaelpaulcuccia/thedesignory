@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 import EquipmentFilter from './components/EquipmentFilter';
-import EquipmentGet from './components/EquipmentGet';
-import EquipmentAdd from './components/EquipmentAdd';
+// import EquipmentGet from './components/EquipmentGet';
+// import EquipmentAdd from './components/EquipmentAdd';
 
 const App = () => {
   return (
     <BrowserRouter>
       <div style={{ backgroundColor: '#EEF4ED' }}>
         <Route exact path="/" component={EquipmentFilter} />
-        <Route exact path="/equipment/get/:id" component={EquipmentGet} />
-        <Route exact path="/equipment/add" component={EquipmentAdd} />
+        {/* <Route exact path="/equipment/get/:id" component={EquipmentGet} />
+        <Route exact path="/equipment/add" component={EquipmentAdd} /> */}
       </div>
     </BrowserRouter>
   )

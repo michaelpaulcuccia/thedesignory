@@ -1,20 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import {
-    MainContainer,
-    Tile,
-    ParaAndTagParent,
-    Parallelogram,
-    Tag,
-    Exclamation,
-    Model,
-    Serial,
-    AssociatedDevices,
-    PlusSign,
-    AddEquipText,
     HeaderContainer,
+    InLineContainerLeft,
+    InLineContainerRight,
     Title,
-    SelectContainer,
-    Select
+    Select,
+    GridContainer,
+    Tile
 } from '../styledcomponents/Styles';
 import { useHistory } from 'react-router-dom';
 
@@ -87,9 +79,11 @@ const EquipmentFilter = () => {
         <>
             <HeaderContainer>
 
-                <Title>EQUIPMENT</Title>
+                <InLineContainerLeft>
+                    <Title>EQUIPMENT</Title>
+                </InLineContainerLeft>
 
-                <SelectContainer>
+                <InLineContainerRight>
                     <Select
                         onChange={handleChange}
                     >
@@ -98,25 +92,25 @@ const EquipmentFilter = () => {
                         <option defaultValue="Repellendus">Repellendus</option>
                         <option defaultValue="Maiores">Maiores</option>
                     </Select>
-                </SelectContainer>
+                </InLineContainerRight>
 
             </HeaderContainer>
 
-            <MainContainer>
+            <br></br>
 
+            <GridContainer>
                 {data.map((item) => (
                     <Tile key={item.id}
                         id={item.id}
                         onClick={(item) => onClickHandler(item)}
                     >
-                        <ParaAndTagParent>
-                            <Parallelogram><span><Tag>{item.tag}</Tag></span></Parallelogram>
-                            <p>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</p>
-                        </ParaAndTagParent>
-                        <br></br>
-                        <Model><strong>{item.model}</strong></Model>
-                        <Serial>Serial Number: {item.serialNumber}</Serial>
-                        <AssociatedDevices>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</AssociatedDevices>
+                        <div>
+                            <div><p>{item.tag}</p></div>
+                            <p>{item.hasError && item.hasError === true ? <p>!</p> : ""}</p>
+                        </div>
+                        <p><strong>{item.model}</strong></p>
+                        <p>Serial Number: {item.serialNumber}</p>
+                        <p>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</p>
                     </Tile>
                 ))}
 
@@ -126,12 +120,14 @@ const EquipmentFilter = () => {
                         onClick={(item) => onClickHandler(item)}
                     >
                         <br></br>
-                        <PlusSign>+</PlusSign>
-                        <AddEquipText>Add Equipment</AddEquipText>
+                        <p>+</p>
+                        <p>Add Equipment</p>
                     </Tile>
                 }
+            </GridContainer>
 
-            </MainContainer>
+
+
         </>
     )
 }
