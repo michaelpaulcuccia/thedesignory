@@ -35,28 +35,17 @@ export const Select = styled.select`
 /* Grid and Tiles */
 
 export const GridContainer = styled.div`
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr 1fr;
-    // grid-template-rows:  repeat(2, 1fr);
-    // grid-column-gap: 1%;
-    // grid-row-gap: .5%; 
-    // margin-left: 10vw;
-    // margin-right: 10vw;
-    // max-width: 1200px;
-
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-    justify-content: space-between;
-    align-items: center;
+    grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin: 20px 20px 20px 20px;
 `;
 
 export const Tile = styled.div`
-    padding: 5px 10px 10px 10px;
-    margin: 15px 5px 15px 5px;
+    padding: 2rem;
     background-color: #FCFDFC;
-    width: minmax(200px, 50vw);
-    height: minmax(200px, 50vh);
+    height: 10rem;
 `;
 
 export const ParaAndTag = styled.div`
@@ -128,4 +117,11 @@ export const AddEquipText = styled.p`
     font-size: 22px;
     font-weight: 400; 
     line-height: 40%;
+`;
+
+/* EquipmentGet.js and EquipmentAdd.js Single Container */
+
+export const SingleContainer = styled.div`
+margin: 0 auto;
+max-width: 50%;
 `;

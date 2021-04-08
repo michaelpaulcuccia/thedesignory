@@ -2,7 +2,7 @@ import React from 'react';
 import {
     SingleContainer,
     Tile,
-    ParaAndTagParent,
+    ParaAndTag,
     Parallelogram,
     Tag,
     Model,
@@ -24,9 +24,9 @@ const EquipmentAdd = () => {
             <br></br>
             <SingleContainer>
                 <Tile>
-                    <ParaAndTagParent>
+                    <ParaAndTag>
                         <Parallelogram><span><Tag>ADD A TAG</Tag></span></Parallelogram>
-                    </ParaAndTagParent>
+                    </ParaAndTag>
                     <br></br>
                     <Model><strong>Model</strong></Model>
                     <Serial>Serial Number: <i>ABC001</i></Serial>

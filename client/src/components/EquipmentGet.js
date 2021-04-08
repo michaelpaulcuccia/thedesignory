@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
     SingleContainer,
     Tile,
-    ParaAndTagParent,
+    ParaAndTag,
     Parallelogram,
     Tag,
     Exclamation,
@@ -59,10 +59,10 @@ const EquipmentGet = ({ match }) => {
                         id={item.id}
                         onClick={(item) => onClickHandler(item)}
                     >
-                        <ParaAndTagParent>
-                            <Parallelogram><span><Tag>{item.tag}</Tag></span></Parallelogram>
-                            <p>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</p>
-                        </ParaAndTagParent>
+                        <ParaAndTag>
+                            <Parallelogram><Tag>{item.tag}</Tag></Parallelogram>
+                            <div>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</div>
+                        </ParaAndTag>
                         <br></br>
                         <Model><strong>{item.model}</strong></Model>
                         <Serial>Serial Number: {item.serialNumber}</Serial>

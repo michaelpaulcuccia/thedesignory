@@ -1,3 +1,4 @@
 body { 
-  background: #EEF4ED
+  background: #EEF4ED;
+  overflow-x: hidden;
 }
