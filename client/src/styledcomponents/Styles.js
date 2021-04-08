@@ -52,7 +52,8 @@ export const Tile = styled.div`
 `;
 
 export const ParaAndTag = styled.div`
-    width: 100%
+    width: 100%;
+    margin-top: 2%;
 `;
 
 export const Parallelogram = styled.div`
@@ -83,4 +84,40 @@ export const Exclamation = styled.div`
     text-align: center;
     background-color: #EEF4ED;
     float: right;
+`;
+
+export const Model = styled.div`
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    margin-left: 3%;
+`;
+
+export const Serial = styled.div`
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 3%;
+`;
+
+export const AssociatedDevices = styled.div`
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 3%;
+`;
+
+export const PlusSign = styled.p`
+    color: #134074; 
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 40%;
+`;
+
+export const AddEquipText = styled.p`
+    color: #134074; 
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400; 
+    line-height: 40%;
 `;

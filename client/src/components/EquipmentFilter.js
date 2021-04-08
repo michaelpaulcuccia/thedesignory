@@ -10,7 +10,12 @@ import {
     ParaAndTag,
     Parallelogram,
     Tag,
-    Exclamation
+    Exclamation,
+    Model,
+    Serial,
+    AssociatedDevices,
+    PlusSign,
+    AddEquipText
 } from '../styledcomponents/Styles';
 import { useHistory } from 'react-router-dom';
 
@@ -112,9 +117,10 @@ const EquipmentFilter = () => {
                             <Parallelogram><Tag>{item.tag}</Tag></Parallelogram>
                             <div>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</div>
                         </ParaAndTag>
-                        {/* <p><strong>{item.model}</strong></p>
-                        <p>Serial Number: {item.serialNumber}</p>
-                        <p>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</p> */}
+                        <br></br>
+                        <Model><strong>{item.model}</strong></Model>
+                        <Serial>Serial Number: {item.serialNumber}</Serial>
+                        <AssociatedDevices>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</AssociatedDevices>
                     </Tile>
                 ))}
 
@@ -124,8 +130,8 @@ const EquipmentFilter = () => {
                         onClick={(item) => onClickHandler(item)}
                     >
                         <br></br>
-                        <p>+</p>
-                        <p>Add Equipment</p>
+                        <PlusSign>+</PlusSign>
+                        <AddEquipText>Add Equipment</AddEquipText>
                     </Tile>
                 }
             </GridContainer>
