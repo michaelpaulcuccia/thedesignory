@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-/* Header */
+/* ------------------------- */
+/* EquipmentFilter.js Header */
+/* ------------------------- */
 
 export const HeaderContainer = styled.div`
     width: 100%;
@@ -29,7 +31,9 @@ export const Select = styled.select`
     background-color: #EEF4ED;
 `;
 
-/* Grid and Tiles */
+/* --------------------------------- */
+/* EquipmentFilter.js Grid and Tiles */
+/* --------------------------------- */
 
 export const GridContainer = styled.div`
     display: grid;
@@ -116,9 +120,26 @@ export const AddEquipText = styled.p`
     line-height: 40%;
 `;
 
-/* EquipmentGet.js and EquipmentAdd.js Single Container */
+/* ----------------------------------------------------- */
+/* EquipmentGet.js and EquipmentAdd.js Single Containers */
+/* ----------------------------------------------------- */
 
 export const SingleContainer = styled.div`
     margin: 0 auto;
     max-width: 50%;
+`;
+
+export const SingleTile = styled.div`
+    background-color: #FCFDFC;
+    width: minmax(60%, 80%);
+    padding: 5px 5px 12px 5px;
+`;
+
+export const SingleParallelogram = styled.div`
+    width: fit-content;
+    height: fit-content;
+    transform: skew(-20deg);
+    background: #134074;
+    float: left;
+    margin-left: 4%;
 `;

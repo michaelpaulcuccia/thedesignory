@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {
     SingleContainer,
-    Tile,
+    SingleTile,
     ParaAndTag,
-    Parallelogram,
+    SingleParallelogram,
     Tag,
     Exclamation,
     Model,
@@ -55,19 +55,19 @@ const EquipmentGet = ({ match }) => {
             <br></br>
             <SingleContainer>
                 {data.map((item) => (
-                    <Tile key={item.id}
+                    <SingleTile key={item.id}
                         id={item.id}
                         onClick={(item) => onClickHandler(item)}
                     >
                         <ParaAndTag>
-                            <Parallelogram><Tag>{item.tag}</Tag></Parallelogram>
+                            <SingleParallelogram><Tag>{item.tag}</Tag></SingleParallelogram>
                             <div>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</div>
                         </ParaAndTag>
                         <br></br>
                         <Model><strong>{item.model}</strong></Model>
                         <Serial>Serial Number: {item.serialNumber}</Serial>
                         <AssociatedDevices>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</AssociatedDevices>
-                    </Tile>
+                    </SingleTile>
                 ))}
             </SingleContainer>
             <button onClick={onClickHandler}>Go Back</button>

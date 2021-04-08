@@ -1,9 +1,9 @@
 import React from 'react';
 import {
     SingleContainer,
-    Tile,
+    SingleTile,
     ParaAndTag,
-    Parallelogram,
+    SingleParallelogram,
     Tag,
     Model,
     Serial,
@@ -24,15 +24,15 @@ const EquipmentAdd = () => {
 
             <SingleContainer>
 
-                <Tile>
+                <SingleTile>
                     <ParaAndTag>
-                        <Parallelogram><span><Tag>ADD A TAG</Tag></span></Parallelogram>
+                        <SingleParallelogram><span><Tag>ADD A TAG</Tag></span></SingleParallelogram>
                     </ParaAndTag>
                     <br></br>
                     <Model><strong>Model</strong></Model>
                     <Serial>Serial Number: <i>ABC001</i></Serial>
                     <AssociatedDevices>Associated Devices: <i>000</i></AssociatedDevices>
-                </Tile>
+                </SingleTile>
 
             </SingleContainer>
             <button onClick={onClickHandler}>Go Back</button>
