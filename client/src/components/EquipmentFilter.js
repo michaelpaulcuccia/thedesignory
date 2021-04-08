@@ -78,7 +78,6 @@ const EquipmentFilter = () => {
         setShowAddEquipment(false);
 
         //filter array by tag, and set to new state
-        //use dataCopy because  if this function has run before the state has been changed and data array will be filtered! 
         let newArray = resjson.filter(item => item.tag === tag);
         setData(newArray)
 
@@ -135,9 +134,6 @@ const EquipmentFilter = () => {
                     </Tile>
                 }
             </GridContainer>
-
-
-
         </>
     )
 }

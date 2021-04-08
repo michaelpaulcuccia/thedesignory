@@ -6,7 +6,6 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
     width: 100%;
-    //max-width: fit-content(20em);
 `;
 
 export const InLineContainerLeft = styled.div`
@@ -36,8 +35,7 @@ export const Select = styled.select`
 /* EquipmentFilter.js Grid and Tiles */
 /* --------------------------------- */
 
-export const GridContainer = styled.div`
-    //max-width: fit-content(20em);
+export const GridContainer = styled.div` 
     display: grid;
     grid-template-columns:
     repeat(auto-fit, minmax(300px, 1fr));

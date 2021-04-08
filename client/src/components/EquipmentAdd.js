@@ -20,10 +20,8 @@ const EquipmentAdd = () => {
     }
 
     return (
-        <div>
-
+        <>
             <SingleContainer>
-
                 <SingleTile>
                     <ParaAndTag>
                         <SingleParallelogram><span><Tag>ADD A TAG</Tag></span></SingleParallelogram>
@@ -33,10 +31,9 @@ const EquipmentAdd = () => {
                     <Serial>Serial Number: <i>ABC001</i></Serial>
                     <AssociatedDevices>Associated Devices: <i>000</i></AssociatedDevices>
                 </SingleTile>
-
             </SingleContainer>
             <button onClick={onClickHandler}>Go Back</button>
-        </div>
+        </>
     )
 }
 

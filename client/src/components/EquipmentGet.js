@@ -51,14 +51,11 @@ const EquipmentGet = ({ match }) => {
     }
 
     return (
-        <div>
+        <>
             <br></br>
             <SingleContainer>
                 {data.map((item) => (
-                    <SingleTile key={item.id}
-                        id={item.id}
-                        onClick={(item) => onClickHandler(item)}
-                    >
+                    <SingleTile key={item.id}>
                         <ParaAndTag>
                             <SingleParallelogram><Tag>{item.tag}</Tag></SingleParallelogram>
                             <div>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</div>
@@ -71,7 +68,7 @@ const EquipmentGet = ({ match }) => {
                 ))}
             </SingleContainer>
             <button onClick={onClickHandler}>Go Back</button>
-        </div>
+        </>
     )
 }
 
