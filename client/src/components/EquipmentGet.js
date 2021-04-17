@@ -73,7 +73,7 @@ const EquipmentGet = ({ match }) => {
                             <ColRight>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</ColRight>
                         </Row>
 
-                        <Model><strong>{item.model}</strong></Model>
+                        <Model>{item.model}</Model>
                         <Serial>Serial Number: {item.serialNumber}</Serial>
                         <AssociatedDevices>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</AssociatedDevices>
                     </Tile>

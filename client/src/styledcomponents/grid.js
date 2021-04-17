@@ -53,7 +53,7 @@ export const GridContainer = styled.div`
 
 export const Tile = styled.div`
     max-width: 350px;
-    background: #fff;
+    background: #FCFDFC;
     padding: 1.5rem 2rem .75rem; 
 `;
 
@@ -64,7 +64,7 @@ export const Parallelogram = styled.div`
     height: fit-content;
     transform: skew(-20deg);
     background: #134074;
-    color: #fff;
+    color: #FCFDFC;
     margin-left: .3rem;
 `;
 

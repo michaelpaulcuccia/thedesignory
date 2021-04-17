@@ -41,7 +41,7 @@ const EquipmentAdd = () => {
                         </ColRight>
                     </Row>
 
-                    <Model><strong>Model</strong></Model>
+                    <Model>Model</Model>
                     <Serial>Serial Number: 000</Serial>
                     <AssociatedDevices>Associated Devices: 0</AssociatedDevices>
                 </Tile>
