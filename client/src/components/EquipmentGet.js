@@ -5,7 +5,7 @@ import {
     ColLeft,
     ColRight,
     GridContainer,
-    SingleTile,
+    Tile,
     Parallelogram,
     UnskewText,
     Exclamation,
@@ -58,7 +58,7 @@ const EquipmentGet = ({ match }) => {
         <Container>
             <GridContainer>
                 {data.map((item) => (
-                    <SingleTile key={item.id}
+                    <Tile key={item.id}
                         id={item.id}
                         onClick={(item) => onClickHandler(item)}
                     >
@@ -76,7 +76,7 @@ const EquipmentGet = ({ match }) => {
                         <Model><strong>{item.model}</strong></Model>
                         <Serial>Serial Number: {item.serialNumber}</Serial>
                         <AssociatedDevices>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</AssociatedDevices>
-                    </SingleTile>
+                    </Tile>
                 ))}
             </GridContainer>
 

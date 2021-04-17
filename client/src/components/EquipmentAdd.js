@@ -5,7 +5,7 @@ import {
     ColLeft,
     ColRight,
     GridContainer,
-    SingleTile,
+    Tile,
     Parallelogram,
     UnskewText,
     Model,
@@ -26,7 +26,7 @@ const EquipmentAdd = () => {
     return (
         <Container>
             <GridContainer>
-                <SingleTile
+                <Tile
                     onClick={() => onClickHandler()}
                 >
                     <Row>
@@ -44,7 +44,7 @@ const EquipmentAdd = () => {
                     <Model><strong>Model</strong></Model>
                     <Serial>Serial Number: 000</Serial>
                     <AssociatedDevices>Associated Devices: 0</AssociatedDevices>
-                </SingleTile>
+                </Tile>
             </GridContainer>
 
             <br></br>

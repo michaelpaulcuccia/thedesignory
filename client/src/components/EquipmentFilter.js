@@ -8,7 +8,7 @@ import {
     ColRight,
     Select,
     GridContainer,
-    SingleTile,
+    Tile,
     Parallelogram,
     UnskewText,
     Exclamation,
@@ -110,7 +110,7 @@ const EquipmentFilter = () => {
 
             <GridContainer>
                 {data.map((item) => (
-                    <SingleTile key={item.id}
+                    <Tile key={item.id}
                         id={item.id}
                         onClick={(item) => onClickHandler(item)}
                     >
@@ -128,11 +128,11 @@ const EquipmentFilter = () => {
                         <Model><strong>{item.model}</strong></Model>
                         <Serial>Serial Number: {item.serialNumber}</Serial>
                         <AssociatedDevices>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</AssociatedDevices>
-                    </SingleTile>
+                    </Tile>
                 ))}
 
                 {showAddEquipment &&
-                    <SingleTile
+                    <Tile
                         id='addItem'
                         onClick={(item) => onClickHandler(item)}
                     >
@@ -140,7 +140,7 @@ const EquipmentFilter = () => {
                             <PlusSign>+</PlusSign>
                             <AddEquipText>Add Equipment</AddEquipText>
                         </AddContainer>
-                    </SingleTile>
+                    </Tile>
                 }
             </GridContainer>
 

@@ -5,6 +5,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
     margin: 30px 25px 30px 25px;
     padding: 15px;
+    max-width: 1500px;
+    margin: 0 auto;
 `;
 
 export const Row = styled.div`
@@ -23,7 +25,6 @@ export const Title = styled.span`
     font-weight: 700;
 `;
 
-
 export const ColRight = styled.div`
     display: flex;
     flex-direction: column;
@@ -41,6 +42,8 @@ export const Select = styled.select`
 
 export const GridContainer = styled.div` 
     margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
@@ -48,24 +51,11 @@ export const GridContainer = styled.div`
     height: 30vh;
 `;
 
-/* *************************************** */
-
 export const Tile = styled.div`
-    background: #fff;
-    height: 100%;
-    padding: 1.5em 2em;
-    width: 100%;
-`;
-
-/* EquipmentGet and Single Tiles */
-export const SingleTile = styled.div`
-    //margin: 0 auto;
     max-width: 350px;
     background: #fff;
-    padding: 1.5em 2em;
+    padding: 1.5rem 2rem .75rem; 
 `;
-
-/* *************************************** */
 
 /* Tag, Parallelogram, Exclamation */
 
