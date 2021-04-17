@@ -43,10 +43,12 @@ export const GridContainer = styled.div`
     margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 15px;
     /*Set a Defined Height of Container And Assign Children (Tiles) a Percentage*/
     height: 30vh;
 `;
+
+/* *************************************** */
 
 export const Tile = styled.div`
     background: #fff;
@@ -54,6 +56,16 @@ export const Tile = styled.div`
     padding: 1.5em 2em;
     width: 100%;
 `;
+
+/* EquipmentGet and Single Tiles */
+export const SingleTile = styled.div`
+    //margin: 0 auto;
+    max-width: 350px;
+    background: #fff;
+    padding: 1.5em 2em;
+`;
+
+/* *************************************** */
 
 /* Tag, Parallelogram, Exclamation */
 
@@ -123,10 +135,3 @@ export const AddEquipText = styled.p`
     font-weight: 400; 
 `;
 
-/* EquipmentGet and Single Tiles */
-export const SingleTile = styled.div`
-    margin: 0 auto;
-    max-width: 300px;
-    background: #fff;
-    padding: 1.5em 2em;
-`;
