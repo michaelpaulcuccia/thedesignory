@@ -1,22 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
-    MainContainer,
+    Container,
+    Row,
+    ColLeft,
+    Title,
+    ColRight,
+    Select,
+    GridContainer,
     Tile,
-    ParaAndTagParent,
     Parallelogram,
-    Tag,
+    UnskewText,
     Exclamation,
     Model,
     Serial,
     AssociatedDevices,
+    AddContainer,
     PlusSign,
-    AddEquipText,
-    HeaderContainer,
-    Title,
-    SelectContainer,
-    Select
-} from '../styledcomponents/Styles';
-import { useHistory } from 'react-router-dom';
+    AddEquipText
+}
+    from '../styledcomponents/grid';
+
 
 const EquipmentFilter = () => {
 
@@ -77,19 +81,21 @@ const EquipmentFilter = () => {
         setShowAddEquipment(false);
 
         //filter array by tag, and set to new state
-        //use dataCopy because  if this function has run before the state has been changed and data array will be filtered! 
         let newArray = resjson.filter(item => item.tag === tag);
         setData(newArray)
 
     }
 
     return (
-        <>
-            <HeaderContainer>
+        <Container>
 
-                <Title>EQUIPMENT</Title>
+            <Row>
 
-                <SelectContainer>
+                <ColLeft>
+                    <Title>EQUIPMENT</Title>
+                </ColLeft>
+
+                <ColRight>
                     <Select
                         onChange={handleChange}
                     >
@@ -98,23 +104,28 @@ const EquipmentFilter = () => {
                         <option defaultValue="Repellendus">Repellendus</option>
                         <option defaultValue="Maiores">Maiores</option>
                     </Select>
-                </SelectContainer>
+                </ColRight>
 
-            </HeaderContainer>
+            </Row>
 
-            <MainContainer>
-
+            <GridContainer>
                 {data.map((item) => (
                     <Tile key={item.id}
                         id={item.id}
                         onClick={(item) => onClickHandler(item)}
                     >
-                        <ParaAndTagParent>
-                            <Parallelogram><span><Tag>{item.tag}</Tag></span></Parallelogram>
-                            <p>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</p>
-                        </ParaAndTagParent>
-                        <br></br>
-                        <Model><strong>{item.model}</strong></Model>
+                        <Row>
+                            <ColLeft>
+                                <Parallelogram>
+                                    <UnskewText>
+                                        {item.tag}
+                                    </UnskewText>
+                                </Parallelogram>
+                            </ColLeft>
+                            <ColRight>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</ColRight>
+                        </Row>
+
+                        <Model>{item.model}</Model>
                         <Serial>Serial Number: {item.serialNumber}</Serial>
                         <AssociatedDevices>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</AssociatedDevices>
                     </Tile>
@@ -125,14 +136,15 @@ const EquipmentFilter = () => {
                         id='addItem'
                         onClick={(item) => onClickHandler(item)}
                     >
-                        <br></br>
-                        <PlusSign>+</PlusSign>
-                        <AddEquipText>Add Equipment</AddEquipText>
+                        <AddContainer>
+                            <PlusSign>+</PlusSign>
+                            <AddEquipText>Add Equipment</AddEquipText>
+                        </AddContainer>
                     </Tile>
                 }
+            </GridContainer>
 
-            </MainContainer>
-        </>
+        </Container>
     )
 }
 

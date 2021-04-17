@@ -1,14 +1,18 @@
 import React from 'react';
 import {
-    SingleContainer,
+    Container,
+    Row,
+    ColLeft,
+    ColRight,
+    GridContainer,
     Tile,
-    ParaAndTagParent,
     Parallelogram,
-    Tag,
+    UnskewText,
     Model,
     Serial,
     AssociatedDevices
-} from '../styledcomponents/Styles';
+}
+    from '../styledcomponents/grid';
 import { useHistory } from 'react-router-dom';
 
 const EquipmentAdd = () => {
@@ -20,21 +24,33 @@ const EquipmentAdd = () => {
     }
 
     return (
-        <div>
-            <br></br>
-            <SingleContainer>
-                <Tile>
-                    <ParaAndTagParent>
-                        <Parallelogram><span><Tag>ADD A TAG</Tag></span></Parallelogram>
-                    </ParaAndTagParent>
-                    <br></br>
-                    <Model><strong>Model</strong></Model>
-                    <Serial>Serial Number: <i>ABC001</i></Serial>
-                    <AssociatedDevices>Associated Devices: <i>000</i></AssociatedDevices>
+        <Container>
+            <GridContainer>
+                <Tile
+                    onClick={() => onClickHandler()}
+                >
+                    <Row>
+                        <ColLeft>
+                            <Parallelogram>
+                                <UnskewText>
+                                    Tag
+                                    </UnskewText>
+                            </Parallelogram>
+                        </ColLeft>
+                        <ColRight>
+                        </ColRight>
+                    </Row>
+
+                    <Model>Model</Model>
+                    <Serial>Serial Number: 000</Serial>
+                    <AssociatedDevices>Associated Devices: 0</AssociatedDevices>
                 </Tile>
-            </SingleContainer>
-            <button onClick={onClickHandler}>Go Back</button>
-        </div>
+            </GridContainer>
+
+            <br></br>
+            <p>Click Tile to Go Back</p>
+
+        </Container>
     )
 }
 
