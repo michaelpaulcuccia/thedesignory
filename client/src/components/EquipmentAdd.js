@@ -1,14 +1,18 @@
 import React from 'react';
 import {
-    SingleContainer,
+    Container,
+    Row,
+    ColLeft,
+    ColRight,
+    GridContainer,
     SingleTile,
-    ParaAndTag,
-    SingleParallelogram,
-    Tag,
+    Parallelogram,
+    UnskewText,
     Model,
     Serial,
     AssociatedDevices
-} from '../styledcomponents/Styles';
+}
+    from '../styledcomponents/grid';
 import { useHistory } from 'react-router-dom';
 
 const EquipmentAdd = () => {
@@ -20,20 +24,33 @@ const EquipmentAdd = () => {
     }
 
     return (
-        <>
-            <SingleContainer>
-                <SingleTile>
-                    <ParaAndTag>
-                        <SingleParallelogram><span><Tag>ADD A TAG</Tag></span></SingleParallelogram>
-                    </ParaAndTag>
-                    <br></br>
+        <Container>
+            <GridContainer>
+                <SingleTile
+                    onClick={() => onClickHandler()}
+                >
+                    <Row>
+                        <ColLeft>
+                            <Parallelogram>
+                                <UnskewText>
+                                    Tag
+                                    </UnskewText>
+                            </Parallelogram>
+                        </ColLeft>
+                        <ColRight>
+                        </ColRight>
+                    </Row>
+
                     <Model><strong>Model</strong></Model>
-                    <Serial>Serial Number: <i>ABC001</i></Serial>
-                    <AssociatedDevices>Associated Devices: <i>000</i></AssociatedDevices>
+                    <Serial>Serial Number: 000</Serial>
+                    <AssociatedDevices>Associated Devices: 0</AssociatedDevices>
                 </SingleTile>
-            </SingleContainer>
-            <button onClick={onClickHandler}>Go Back</button>
-        </>
+            </GridContainer>
+
+            <br></br>
+            <p>Click Tile to Go Back</p>
+
+        </Container>
     )
 }
 

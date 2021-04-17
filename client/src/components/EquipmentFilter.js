@@ -10,7 +10,14 @@ import {
     GridContainer,
     Tile,
     Parallelogram,
-    UnskewText
+    UnskewText,
+    Exclamation,
+    Model,
+    Serial,
+    AssociatedDevices,
+    AddContainer,
+    PlusSign,
+    AddEquipText
 }
     from '../styledcomponents/grid';
 
@@ -115,12 +122,12 @@ const EquipmentFilter = () => {
                                     </UnskewText>
                                 </Parallelogram>
                             </ColLeft>
-                            <ColRight>{item.hasError && item.hasError === true ? <span>!</span> : ""}</ColRight>
+                            <ColRight>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</ColRight>
                         </Row>
 
-                        <p><strong>{item.model}</strong></p>
-                        <p>Serial Number: {item.serialNumber}</p>
-                        <p>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</p>
+                        <Model><strong>{item.model}</strong></Model>
+                        <Serial>Serial Number: {item.serialNumber}</Serial>
+                        <AssociatedDevices>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</AssociatedDevices>
                     </Tile>
                 ))}
 
@@ -129,8 +136,10 @@ const EquipmentFilter = () => {
                         id='addItem'
                         onClick={(item) => onClickHandler(item)}
                     >
-                        <p>+</p>
-                        <p>Add Equipment</p>
+                        <AddContainer>
+                            <PlusSign>+</PlusSign>
+                            <AddEquipText>Add Equipment</AddEquipText>
+                        </AddContainer>
                     </Tile>
                 }
             </GridContainer>

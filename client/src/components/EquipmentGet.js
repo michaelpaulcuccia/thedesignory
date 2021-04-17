@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import {
-    SingleContainer,
+    Container,
+    Row,
+    ColLeft,
+    ColRight,
+    GridContainer,
     SingleTile,
-    ParaAndTag,
-    SingleParallelogram,
-    Tag,
+    Parallelogram,
+    UnskewText,
     Exclamation,
     Model,
     Serial,
     AssociatedDevices
-} from '../styledcomponents/Styles';
+}
+    from '../styledcomponents/grid';
 import { useHistory } from 'react-router-dom';
 
 const EquipmentGet = ({ match }) => {
@@ -51,24 +55,36 @@ const EquipmentGet = ({ match }) => {
     }
 
     return (
-        <>
-            <br></br>
-            <SingleContainer>
+        <Container>
+            <GridContainer>
                 {data.map((item) => (
-                    <SingleTile key={item.id}>
-                        <ParaAndTag>
-                            <SingleParallelogram><Tag>{item.tag}</Tag></SingleParallelogram>
-                            <div>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</div>
-                        </ParaAndTag>
-                        <br></br>
+                    <SingleTile key={item.id}
+                        id={item.id}
+                        onClick={(item) => onClickHandler(item)}
+                    >
+                        <Row>
+                            <ColLeft>
+                                <Parallelogram>
+                                    <UnskewText>
+                                        {item.tag}
+                                    </UnskewText>
+                                </Parallelogram>
+                            </ColLeft>
+                            <ColRight>{item.hasError && item.hasError === true ? <Exclamation>!</Exclamation> : ""}</ColRight>
+                        </Row>
+
                         <Model><strong>{item.model}</strong></Model>
                         <Serial>Serial Number: {item.serialNumber}</Serial>
                         <AssociatedDevices>Associated Devices: {item.associatedDevices && item.associatedDevices.length !== null ? item.associatedDevices.length : '0'}</AssociatedDevices>
                     </SingleTile>
                 ))}
-            </SingleContainer>
-            <button onClick={onClickHandler}>Go Back</button>
-        </>
+            </GridContainer>
+
+            <br></br>
+            <p>Click Tile to Go Back</p>
+
+        </Container>
+
     )
 }
 
